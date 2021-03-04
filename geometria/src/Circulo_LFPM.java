@@ -6,7 +6,11 @@ public class Circulo_LFPM extends FiguraGeometrica_LFPM {
 	
 	public Circulo_LFPM(double r, String tipoFigura) {
 		super(tipoFigura);
-		radio = r;
+		if(r<0) {
+			radio = r *-1;
+		} else {
+			radio = r;
+		}
 	}
 
 	@Override
